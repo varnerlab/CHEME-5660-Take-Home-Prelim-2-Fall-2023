@@ -2,7 +2,7 @@ function securityterm(duration::String)::Float64
 
     # initialize -
     number_of_days_per_week = 7.0;
-    number_of_days_per_year = 364.0;
+    number_of_days_per_year = 365.0;
     value = 0.0;
     numerator = 0.0;
     denominator = 1.0;
@@ -28,7 +28,7 @@ function securityterm(duration::String)::Float64
     end   
     
     # calculate -
-    value = (numerator - 2) / denominator;
+    value = numerator / denominator;
 
     # return -
     return value;
